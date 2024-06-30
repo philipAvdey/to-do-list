@@ -1,53 +1,47 @@
-.complete{
+.complete {
   color: #21b142;
   background-color: transparent;
   transition: background-color 100ms ease;
 
-  .bullet-point{
+  .bullet-point {
     background-color: #21b142;
   }
 
-  &:hover{
+  &:hover {
     background-color: #cbf2d4;
 
-    img{
+    img {
       opacity: 1;
     }
-    
 
-    button{
-      &:hover{
+    button {
+      &:hover {
         display: show;
       }
     }
-
   }
-  
-  
 }
 
-.incomplete{
+.incomplete {
   transition: background-color 100ms ease;
 
-  &:hover{
+  &:hover {
     background-color: var(--task-color);
 
-    img{
+    img {
       opacity: 1;
     }
 
-    button{
-      &:hover{
+    button {
+      &:hover {
         display: show;
-
       }
     }
-
   }
 }
 
-.app__task-list-item, .incomplete{
-
+.app__task-list-item,
+.incomplete {
   display: flex;
   border-radius: 10px;
 
@@ -58,16 +52,13 @@
   justify-content: space-between;
   padding: 0 10px;
   gap: 5px;
- 
 
   max-width: 550px;
   margin: 10px 0;
 
-  p{
+  p {
     margin: 5px;
   }
-
-  
 
   button {
     border: 0;
@@ -88,41 +79,32 @@
       transition: filter 200ms ease;
       opacity: 0;
 
-      &:hover{
+      &:hover {
         filter: none;
-
       }
-
     }
   }
 }
 
-.app__task-list-item_bullet-text{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    overflow: hidden;
-
-    
-    span {
-
-        margin-right: 2px;
-        background-color: black;
-        border-radius: 50%;
-        min-width: 8px;
-        min-height: 8px;
-        
-      }
-    
-      p {
-        font-size: 1.2rem;
-        
-      }
-
-}
-
-.app__task-list-item_buttons{
+.app__task-list-item_bullet-text {
   display: flex;
+  gap: 5px;
+  align-items: center;
+  overflow: hidden;
 
+  span {
+    margin-right: 2px;
+    background-color: black;
+    border-radius: 50%;
+    min-width: 8px;
+    min-height: 8px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
 }
 
+.app__task-list-item_buttons {
+  display: flex;
+}

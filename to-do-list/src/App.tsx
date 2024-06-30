@@ -17,13 +17,15 @@ function App() {
   };
 
   const completeTask = (id: number) => {
-    setTodoList(todoList.map((task) => {
-      if(task.id === id){
-        task.status = !task.status;
-      }
-      return task;
-    }));
-  }
+    setTodoList(
+      todoList.map((task) => {
+        if (task.id === id) {
+          task.status = !task.status;
+        }
+        return task;
+      })
+    );
+  };
 
   const addTask = () => {
     if (newTask === "") {
@@ -36,7 +38,6 @@ function App() {
       };
       setTodoList([...todoList, task]);
       setNewTask("");
-
     }
   };
 
@@ -73,7 +74,13 @@ function App() {
 
         <div className="app__task-list">
           {todoList.map((todo) => (
-            <Task taskStatus = {todo.status} completeTask={completeTask} deleteTask={deleteTask} taskName={todo.name} id={todo.id} />
+            <Task
+              taskStatus={todo.status}
+              completeTask={completeTask}
+              deleteTask={deleteTask}
+              taskName={todo.name}
+              id={todo.id}
+            />
           ))}
         </div>
       </div>

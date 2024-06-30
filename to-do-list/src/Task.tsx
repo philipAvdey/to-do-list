@@ -15,7 +15,9 @@ const Task = (props: Props) => {
   return (
     <>
       <div
-        className={`app__task-list-item ${props.taskStatus ? "complete" : "incomplete"}`}
+        className={`app__task-list-item ${
+          props.taskStatus ? "complete" : "incomplete"
+        }`}
         key={`${props.taskName}-${props.id}`}
       >
         <div className="app__task-list-item_bullet-text">
