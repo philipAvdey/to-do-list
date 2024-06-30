@@ -9,11 +9,22 @@ function App() {
   interface TaskObj {
     id: number;
     name: string;
+    status: boolean;
   }
 
   const deleteTask = (id: number) => {
     setTodoList(todoList.filter((task) => task.id !== id));
   };
+
+  const completeTask = (id: number) => {
+    setTodoList(todoList.map((task) => {
+      if(task.id === id){
+        task.status = !task.status;
+      }
+      return task;
+    }));
+  }
+
   const addTask = () => {
     if (newTask === "") {
       alert("Please enter some text!");
@@ -21,9 +32,11 @@ function App() {
       const task = {
         name: newTask,
         id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
+        status: false,
       };
       setTodoList([...todoList, task]);
       setNewTask("");
+
     }
   };
 
@@ -60,7 +73,7 @@ function App() {
 
         <div className="app__task-list">
           {todoList.map((todo) => (
-            <Task deleteTask={deleteTask} taskName={todo.name} id={todo.id} />
+            <Task taskStatus = {todo.status} completeTask={completeTask} deleteTask={deleteTask} taskName={todo.name} id={todo.id} />
           ))}
         </div>
       </div>
