@@ -1,0 +1,73 @@
+#root {
+  --main-color: #1788f1;
+  --main-color-hover: #1372ca;
+  --task-color: #adcfe6;
+
+  margin: 25px;
+}
+
+.app__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+  }
+}
+
+.app__add-task {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+
+  button,
+  input {
+    font-size: 1.3rem;
+  }
+
+  input {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 2px solid gray;
+
+    transition: border-color 300ms ease;
+    width: 450px;
+
+    &:focus {
+      outline: none;
+      border-color: black;
+    }
+  }
+
+  button {
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.clear-all-button {
+  background-color: #fc5f57;
+  &:hover {
+    background-color: #cf4e48;
+  }
+}
+
+.add-task-button {
+  background-color: var(--main-color);
+  &:hover {
+    background-color: var(--main-color-hover);
+  }
+}

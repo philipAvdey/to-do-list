@@ -1,0 +1,90 @@
+.app__task-list-item {
+
+  display: flex;
+  border-radius: 10px;
+
+  height: auto;
+  width: auto;
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  gap: 5px;
+  transition: background-color 100ms ease;
+
+  &:hover{
+    background-color: var(--task-color);
+
+    img{
+      opacity: 1;
+    }
+
+    button{
+      &:hover{
+        display: show;
+
+      }
+    }
+
+  }
+
+  max-width: 550px;
+  margin: 10px 0;
+
+  p{
+    margin: 5px;
+  }
+
+  
+
+  button {
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0 0 0 5px;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      width: 25px;
+      height: 25px;
+      filter: grayscale(1);
+      transition: filter 200ms ease;
+      opacity: 0;
+
+      &:hover{
+        filter: none;
+
+      }
+
+    }
+  }
+}
+
+.app__task-list-item_bullet-text{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    overflow: hidden;
+
+    
+    span {
+        margin-top: 2px;
+        margin-right: 2px;
+        background-color: black;
+        border-radius: 50%;
+        min-width: 8px;
+        min-height: 8px;
+        
+      }
+    
+      p {
+        font-size: 1.2rem;
+        
+      }
+
+}
