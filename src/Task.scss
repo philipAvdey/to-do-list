@@ -1,14 +1,14 @@
 .complete {
-  color: #21b142;
+  color: var(--task-complete-color);
   background-color: transparent;
   transition: background-color 100ms ease;
 
   .bullet-point {
-    background-color: #21b142;
+    background-color: var(--task-complete-color);
   }
 
   &:hover {
-    background-color: #cbf2d4;
+    background-color: var(--task-complete-light-color);
 
     img {
       opacity: 1;
