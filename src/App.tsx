@@ -80,6 +80,7 @@ function App() {
               deleteTask={deleteTask}
               taskName={todo.name}
               id={todo.id}
+              key={todo.id}
             />
           ))}
         </div>
